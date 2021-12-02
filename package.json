@@ -9,7 +9,7 @@
     "compiler:watch": "tsc --watch",
     "build": "npm run cleanup && npm run compiler",
     "start": "node dist/code.js",
-    "dev": "nodemon -w *.ts -e ts -x ts-node --files -H -T code.ts"
+    "run-code": "yarn cleanup && yarn compiler && yarn start"
   },
   "author": "",
   "license": "ISC",

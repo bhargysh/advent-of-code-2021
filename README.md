@@ -4,7 +4,5 @@
 ## To Run
 
 ```
-yarn cleanup
-yarn compiler
-yarn start
+yarn run-code
 ```
