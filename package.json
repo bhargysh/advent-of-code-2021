@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/code.js",
+  "scripts": {
+    "cleanup": "rimraf dist",
+    "compiler": "tsc --pretty",
+    "compiler:watch": "tsc --watch",
+    "build": "npm run cleanup && npm run compiler",
+    "start": "node dist/code.js",
+    "dev": "nodemon -w *.ts -e ts -x ts-node --files -H -T code.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.11",
+    "eslint": "^8.3.0",
+    "tslib": "^2.3.1"
+  }
+}
