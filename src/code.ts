@@ -1,11 +1,19 @@
-import * as fs from 'fs';
+import * as fs from "fs";
 
-fs.readFile('input/day1Data.txt', function(err, data) {
-    if(err) throw err;
+fs.readFile("input/day1Data.txt", function (err, data) {
+  if (err) throw err;
 
-    const arr = data.toString().replace(/\r\n/g,'\n').split('\n');
+  const arr: string[] = data.toString().split("\n");
+  var result: string[] = [];
 
-    for(let i of arr) {
-        console.log(i);
-    }
+  arr.forEach(function(item, index, array) {
+    let current = parseInt(item);
+    let next = parseInt(array[index + 1]);
+
+    next > current ? result.push("increased") : result.push("decreased");
+  })
+
+  const count = result.filter((str) => str == "increased").length;
+
+  console.log(count);
 });
